@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { People } from './people.model';
 
@@ -6,11 +7,10 @@ import { People } from './people.model';
 })
 export class PeopleSWService {
 
-  constructor() {}
+  constructor(
+    private httpClient: HttpClient,
+  ) {}
 
-  persona: People = {
-    name = 
-  }
-
-
+  persona: People[] = []; 
 }
+

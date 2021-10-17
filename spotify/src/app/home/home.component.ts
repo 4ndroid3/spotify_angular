@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { PeopleSWService } from '../people-sw.service';
 
 @Component({
