@@ -10,11 +10,18 @@ import { People } from '../people.model';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private personaService: PeopleSWService) { }
-
-  ngOnInit(): void {
-    this.personaService.getPeople();
+  constructor(public personaService: PeopleSWService) {   
+    personaService.getPeopleJson('https://swapi.dev/api/people/1/')
+      .subscribe(
+        (res: any) => {
+          console.log(res)
+        }
+      );
   }
 
+    
+  
+  ngOnInit(): void {
+  } 
   
 }
