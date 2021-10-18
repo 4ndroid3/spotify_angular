@@ -9,20 +9,12 @@ import { People } from '../people.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  persona: People[] = []; 
 
-  constructor(private httpClient: HttpClient,) { }
+  constructor(private personaService: PeopleSWService) { }
 
   ngOnInit(): void {
-    this.getPeople();
+    this.personaService.getPeople();
   }
 
-  getPeople() {
-    this.httpClient.get<any>('https://swapi.dev/api/people/1/').subscribe(
-      response => {
-        console.log(response);
-        this.persona = response;
-      }
-    );
-  }
+  
 }
