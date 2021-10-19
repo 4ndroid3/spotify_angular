@@ -7,28 +7,13 @@ import { People } from './people.model';
 })
 export class PeopleSWService {
 
+  persona = new People(
+    "", "", "", "", "", "", "");
   constructor(
     private http: HttpClient,) { }
 
-  personas: People[] = []; 
   
   getPeopleJson(url: string) {
     return this.http.get(url);
   }
 }
-      // response => {
-
-        // this.personas = response;
-        // let persona = new People(
-        //   response['name'],
-        //   response['height'],
-        //   response['hair_color'],
-        //   response['skin_color'],
-        //   response['eye_color'],
-        //   response['birth_year'],
-        //   response['gender'],
-        // );
-      // }
-    // );
-  // }
-

@@ -1,4 +1,12 @@
 export class People {
+    name: string = "";
+    height: string = "";
+    hair_color: string = "";
+    skin_color: string = "";
+    eye_color: string = "";
+    birth_year: string = "";
+    gender: string = "";
+    
     constructor(
         name: string, 
         height: string,
@@ -17,12 +25,7 @@ export class People {
         this.gender = gender;
     }
 
-    name: string = "";
-    height: string = "";
-    hair_color: string = "";
-    skin_color: string = "";
-    eye_color: string = "";
-    birth_year: string = "";
-    gender: string = "";
+
+
 
 }

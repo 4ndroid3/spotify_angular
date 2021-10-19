@@ -1,3 +1,16 @@
 <div class="container">
-    <input type="submit" class="btn btn-primary" style="margin-top: 15px;"> 
+    <p>Ingrese un ID</p>
+    <input type="text" [(ngModel)]="id_persona">
+    <br>
+    <input type="submit" class="btn btn-primary" style="margin-top: 15px;" (click)="cargarPersona()">
+    <br>
+    <br>
+
+    <p>
+        Nombre: {{ persona.name }}
+    </p>
+    <p>
+        Año Nacimiento: {{ persona.birth_year }}
+    </p>
+
 </div>
