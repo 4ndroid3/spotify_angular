@@ -9,9 +9,27 @@ import { People } from '../people.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  pepe: any;
+
+  name: string = '';
+  height: string = '';
+  hair_color: string = '';
+  skin_color: string = '';
+  eye_color: string = '';
+  birth_year: string = '';
+  gender: string = '';
+  
+  id_persona: string = '1';
+
   persona = new People(
-    "", "", "", "", "", "", "");
+    this.name, 
+    this.height, 
+    this.hair_color, 
+    this.skin_color, 
+    this.eye_color, 
+    this.birth_year, 
+    this.gender
+  );
+
   constructor(public personaService: PeopleSWService) {   
   }
   
@@ -19,9 +37,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  id_persona: string = '1';
   cargarPersona() {
-    this.id_persona = this.id_persona
     this.personaService.getPeopleJson(`https://swapi.dev/api/people/${this.id_persona}/`)
     .subscribe(
       (res: any) => {
