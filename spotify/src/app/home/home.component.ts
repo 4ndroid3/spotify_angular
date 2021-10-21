@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MiPipePipe } from '../mi-pipe.pipe';
 import { PeopleSWService } from '../people-sw.service';
 import { People } from '../people.model';
+
 
 @Component({
   selector: 'app-home',

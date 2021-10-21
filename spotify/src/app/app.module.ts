@@ -8,12 +8,14 @@ import { ListComponent } from './list/list.component';
 import { PeopleSWService } from './people-sw.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MiPipePipe } from './mi-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    MiPipePipe
   ],
   imports: [
     BrowserModule,

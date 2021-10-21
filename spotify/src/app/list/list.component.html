@@ -1,3 +1,15 @@
 <div class="container">
-    <p>list works!</p>
+    <div *ngFor="let persona of personasArray">
+        <p>Nombre: {{ persona.name }}</p>
+        <p>Altura: {{ persona.height }}</p>
+        <p>Color de pelo: {{ persona.hair_color }}</p>     
+        <p>Color de piel: {{ persona.skin_color }}</p>     
+        <p>Color de ojos: {{ persona.eye_color }}</p>    
+        <p>Año de nacimiento: {{ persona.birth_year }}</p>
+        <p>Genero: {{ persona.gender }}</p>
+        <br>
+    </div>
+    <div style="text-align: center;">
+        <button class="btn btn-primary" (click)="volverHome()">Volver a Home</button>
+    </div>
 </div>
