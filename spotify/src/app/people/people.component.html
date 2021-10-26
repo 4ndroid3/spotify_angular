@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+        <div class="box">
+            <p>Ingrese un ID del 1 al 83 </p>
+            <input type="text" [(ngModel)]="id_persona">
+            <br>
+            <input type="submit" class="button is-primary" style="margin-top: 15px;" (click)="cargarPersona()">
+        </div>
+    </div>
+    <div class="column">
+        <div class="box">
+            <p>Nombre: <span [ngStyle]="{color: persona.name=='Luke Skywalker' ? 'red' : 'black'}">{{ persona.name }}</span></p>
+            <p>Año Nacimiento: {{ persona.birth_year }}</p>
+            <p>Altura: {{ persona.height }}</p>
+            <p>Color de pelo: {{ persona.hair_color | miPipe }}</p>
+            <p>Color de piel: {{ persona.skin_color }}</p>
+            <p>Color de ojos: {{ persona.eye_color }}</p>
+            <p>Genero: {{ persona.gender }}</p>
+        </div>
+    </div>
+  </div>
+  <div class="block">
+    <div *ngFor="let persona of personasArray">
+        <p>Nombre: {{ persona.name }}</p>
+        <p>Altura: {{ persona.height }}</p>
+        <p>Color de pelo: {{ persona.hair_color }}</p>
+        <p>Color de piel: {{ persona.skin_color }}</p>
+        <p>Color de ojos: {{ persona.eye_color }}</p>
+        <p>Año de nacimiento: {{ persona.birth_year }}</p>
+        <p>Genero: {{ persona.gender }}</p>
+        <br>
+    </div>
+</div>
+  <div style="text-align: center;">
+    <button class="button is-primary" (click)="volverHome()">Volver a Home</button>
+  </div>
+</div>

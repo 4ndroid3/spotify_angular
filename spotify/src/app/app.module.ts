@@ -4,19 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ListComponent } from './list/list.component';
-import { PeopleSWService } from './people-sw.service';
+import { PlanetsComponent } from './planets/planets.component';
+import { PeopleSWService } from './services/people-sw.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MiPipePipe } from './mi-pipe.pipe';
+import { PeopleComponent } from './people/people.component';
+import { ShipsComponent } from './ships/ships.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     HomeComponent,
-    ListComponent,
-    MiPipePipe
-  ],
+    PlanetsComponent,
+    MiPipePipe,
+    PeopleComponent,
+    ShipsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
